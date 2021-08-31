@@ -39,3 +39,5 @@ tidy_data <- mean_and_std_data %>%
              group_by(subjectid, activity) %>% 
              summarize(avg = mean(value))
 
+write.table(tidy_data, row.names = FALSE, "./data/tidy_data.txt")
+
